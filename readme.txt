@@ -19,19 +19,15 @@ $　git config --global core.editor "vim -f"
   #git initialize
     $ git init
     $git add README.md
-1）ローカルリポジトリを作成する
-    $ git init
 
-    $git status  #状態確認。随時作成
+ 1)$ git init   #ローカルリポジトリを作成する
+ 2)$git add .  #  #ローカルリポジトリにファイルの変更点を追加（インデックスに追加）
+ 2)$ git add <filename>
 
-2）ローカルリポジトリにファイルの変更点を追加（インデックスに追加）
-    $ git add .  # $ git add <filename>
+ 3) $git status  #状態確認。随時作成
 
-3）ローカルリポジトリにインデックスに追加したファイルを登録
-    $git commit -m "first commit"
-
-4)コミットログの確認
-    $git log
+ 4)$git commit -m "first commit" #ローカルリポジトリにインデックスに追加したファイルを登録
+ 5)$git log #コミットログの確認
 
 #GitHubにプッシュ
  (1)GitHubアカウント作成
@@ -42,23 +38,19 @@ $　git config --global core.editor "vim -f"
 4)インデックス（ファイルの変更点などのリスト？）をGitHubに作成．
    $ git remote add origin https://github.com/<username>/first_app.git
 
-5)コミットされたデータをGitHubに送信（プッシュ）します．
-   $ git push -u origin master
+5) $ git push -u origin master #コミットされたデータをGitHubに送信（プッシュ）
      or 
-   $ git push origin master
+   $ git push origin master    #コミットされたデータをGitHubに送信（プッシュ）
 
 
 〇プッシュしたデータを変更・更新してみる
-0) fileを編集する。
-
-1）変更をインデックスに追加
-　　$ git add test.txt
-
-2）ファイルを登録（コミット）
-　　$ git commit -m "変更してみたよ"
-
-3）データの送信
-　　$ git push origin master
+  0) fileを編集する。
+  1）$ git add test.txt  #変更をインデックスに追加
+  2）$ git commit -m "変更してみたよ" #ファイルを登録（コミット）
+  3）$ git push origin master #データの送信
 
 
-
+〇その他参考コマンド
+　$git status    #コミット待ちファイルの表示
+  $git checkout  #check out
+  $git push      #リモートレポジトリコミット
